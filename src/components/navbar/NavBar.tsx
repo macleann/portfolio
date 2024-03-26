@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../../nm_logo.svg';
+import './NavBar.css';
+import logo from '../../images/nm_logo.svg';
 
 export const NavBar: React.FC = () => {
     return (

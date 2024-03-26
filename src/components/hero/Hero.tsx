@@ -1,11 +1,16 @@
 import React from 'react';
 import './Hero.css';
+import heroImage from '../../images/me_512.png';
 
 export const Hero: React.FC = () => {
     return (
-        <div className="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Discover my amazing projects and skills</p>
-        </div>
+        <section id="hero">
+            <h1>Hi, my name is Neil MacLean and this is my website</h1>
+            <p>i make things sometimes</p>
+            <img src={heroImage} />
+            <button onClick={() => {
+                window.open('https://drive.google.com/file/d/1clsgHpRT8uiRUKKQA3_O6teAUOOzpHUb/view?usp=sharing');
+            }}>Download Resume</button>
+        </section>
     );
 };

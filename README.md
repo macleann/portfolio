@@ -1,6 +1,6 @@
 # My Portfolio Site
 
-Welcome to my portfolio site! This is where I showcase my projects, skills, and experiences as a full-stack software developer.
+Welcome to my portfolio site! This is where I showcase my projects, skills, and experiences as a full-stack software developer. Take a look at the low fidelity wire-frame for this project [here](https://www.figma.com/file/1FYd4GuzYa7H8xnZ6yFBHo/Portfolio?type=design&node-id=2%3A22&mode=design&t=NXh8XMhLTRE4LkSS-1).
 
 ## Table of Contents
 - [About Me](#about-me)
