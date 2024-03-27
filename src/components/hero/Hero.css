@@ -82,3 +82,21 @@
     margin: 20px;
     border-radius: 5%;
 }
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-content button {
+        font-size: 1rem;
+    }
+
+    .portfolio-picture {
+        width: 200px;
+    }
+}
