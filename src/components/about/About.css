@@ -1,0 +1,52 @@
+#about {
+    display: flex;
+    margin: auto;
+}
+
+.about-text {
+    width: 50%;
+    margin: 0 50px;
+}
+
+.about-text h2 {
+    align-self: flex-start;
+}
+
+.about-text h3 {
+    margin: 0 50px;
+    text-align: right;
+}
+
+.about-text p {
+    align-self: flex-start;
+    text-rendering: auto;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+iframe {
+    width: 50%;
+    height: 75%;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        height: 175vh;
+        scroll-snap-type: none;
+    }
+
+    .about-text {
+        width: 85%;
+        margin: 5px;
+    }
+
+    iframe {
+        width: 85%;
+        height: 500px;
+        margin: 5px;
+    }
+}
