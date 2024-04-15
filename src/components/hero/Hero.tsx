@@ -45,8 +45,8 @@ export const Hero: React.FC = () => {
         <section id="hero">
             <div className="hero-background"/>
             <div className="hero-content">
-                <h1>Hi, my name is Neil MacLean and this is my website</h1>
-                <p>i make things sometimes</p>
+                <h1>Neil MacLean</h1>
+                <p>developer | musician | creative</p>
                 <button onClick={() => {
                     window.open('https://drive.google.com/file/d/1clsgHpRT8uiRUKKQA3_O6teAUOOzpHUb/view?usp=sharing');
                 }}>Download Resume</button>

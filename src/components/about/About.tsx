@@ -2,6 +2,8 @@ import React from 'react';
 import './About.css';
 
 export const About: React.FC = () => {
+    const isMobile: boolean = window.innerWidth <= 768 ? true : false;
+
     return (
         <section id="about">
             <div className="about-text">
@@ -17,7 +19,7 @@ export const About: React.FC = () => {
                 I've also obtained my AZ-900 certification in October 2023, adding to my expertise and ensuring a solid foundation in cloud computing principles. Additionally, I leverage Jenkins for backend CI/CD pipelines, GitHub Actions for frontend CI/CD workflows, and utilize the Cypress testing framework on all of my projects to ensure quality and reliability.
                 </p>
                 <p>
-                Outside of coding, I co-own and operate <a href="https://likeyoumeanitrecords.com">Like You Mean It Records</a>, a small independent record label dedicated to championing music we believe in from artists we care about. In 2021, I wrote and recorded an album <i>Euneirophrenia</i> under the name Home Visions, which you can find below! This unique blend of entrepreneurial spirit and creative passion fuels my drive to innovate and push boundaries in both the tech and music industries.
+                Outside of coding, I co-own and operate <a href="https://likeyoumeanitrecords.com">Like You Mean It Records</a>, a small independent record label dedicated to championing music we believe in from artists we care about. In 2021, I wrote and recorded an album <i>Euneirophrenia</i> under the name Home Visions{isMobile ? ", which you can find below!" : " (right)."} This unique blend of entrepreneurial spirit and creative passion fuels my drive to innovate and push boundaries in both the tech and music industries.
                 </p>
                 <p>
                 If you're looking for a versatile and driven web developer with a knack for turning ideas into reality, look no further. Let's collaborate and bring your vision to life!
