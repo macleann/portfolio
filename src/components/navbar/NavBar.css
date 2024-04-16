@@ -37,8 +37,9 @@ a {
 
 #site-logo {
     width: 100px;
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
     margin-right: auto;
+    margin-left: 1.5em;
 }
 
 #hamburger {
@@ -51,6 +52,10 @@ a {
         flex-direction: column;
     }
 
+    .nav-items {
+        padding: 0;
+    }
+
     .nav-list {
         flex-direction: column;
     }
@@ -61,7 +66,7 @@ a {
 
     #hamburger {
         display: flex;
-        margin: 1em 2em 1em auto;
+        margin: 1em 1.5em 1em auto;
         font-size: 1.5em;
     }
 }
