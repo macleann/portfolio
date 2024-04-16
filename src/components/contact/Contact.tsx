@@ -9,12 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 library.add(fab);
 library.add(far);
 
-interface EmailJSForm {
-    name: string;
-    email: string;
-    message: string; 
-}
-
 export const Contact: React.FC = () => {
     const form = useRef<HTMLFormElement>(null);
     const [formStatus, setFormStatus] = useState('');

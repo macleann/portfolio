@@ -42,7 +42,7 @@ export const NavBar: React.FC = () => {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, [open, isMobile, screenWidth]);
+    }, [open, isMobile, screenWidth, handleResize]);
 
     return (
         <nav id="navBar">
