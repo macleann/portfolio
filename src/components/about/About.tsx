@@ -25,7 +25,7 @@ export const About: React.FC = () => {
                 If you're looking for a versatile and driven web developer with a knack for turning ideas into reality, look no further. Let's collaborate and bring your vision to life!
                 </p>
             </div>
-            <iframe src="https://open.spotify.com/embed/album/44cFXRKSFOPuoe2qIPn8sm?utm_source=generator" width="50%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe title="spotify-embed" src="https://open.spotify.com/embed/album/44cFXRKSFOPuoe2qIPn8sm?utm_source=generator" width="50%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </section>
     );
 };
