@@ -35,12 +35,13 @@
 
 @media screen and (max-width: 768px) {
     #projects > h2 {
+        margin-top: 25%;
         font-size: 200%;
     }
 
     .project {
         flex-direction: column;
-        width: 75%;
+        width: 85%;
     }
 
     .project-text {

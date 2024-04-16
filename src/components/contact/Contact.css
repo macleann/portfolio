@@ -25,11 +25,14 @@ h2 {
 }
 
 .contact-input {
-    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+textarea {
+    height: 150px;
 }
 
 .contact-button {
@@ -54,6 +57,9 @@ h2 {
 footer {
     position: absolute;
     bottom: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-link {
@@ -70,4 +76,14 @@ footer {
     width: 30px;
     height: 30px;
     margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form {
+        width: 85%;
+    }
+    
+    textarea {
+        max-width: 100%;
+    }
 }

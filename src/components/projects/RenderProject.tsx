@@ -2,6 +2,8 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 
+const isMobile = window.innerWidth <= 768;
+
 const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -36,7 +38,7 @@ export const RenderProject: React.FC<RenderProjectProps> = ({ projects }) => {
             draggable={true}
             showDots={true}
             renderDotsOutside={true}
-            arrows={false}
+            arrows={isMobile ? false : true}
             responsive={responsive}
             infinite={true}
             centerMode={false}
