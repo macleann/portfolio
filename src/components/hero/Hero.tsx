@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
                     window.open('https://drive.google.com/file/d/1clsgHpRT8uiRUKKQA3_O6teAUOOzpHUb/view?usp=sharing');
                 }}>Download Resume</button>
             </div>
-            <img alt="A picture of me holding a plant" src={heroImage} className="portfolio-picture"/>
+            <img alt="Me holding a plant" src={heroImage} className="portfolio-picture"/>
             
         </section>
     );
