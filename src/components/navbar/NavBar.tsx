@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './NavBar.css';
 import logo from '../../images/nm_logo.svg';
 import { NavList } from './NavList';
@@ -16,7 +16,7 @@ export const NavBar: React.FC = () => {
     };
 
     // Handle resizing of the window
-    const handleResize = () => {
+    const handleResize = useCallback(() => {
         setScreenWidth(window.innerWidth);
         setIsMobile(screenWidth <= 768);
 
@@ -32,7 +32,7 @@ export const NavBar: React.FC = () => {
                 item.setAttribute('style', 'display: flex');
             });
         }
-    }
+    }, [open, isMobile, screenWidth]);
 
     useEffect(() => {
         handleResize();
@@ -42,7 +42,7 @@ export const NavBar: React.FC = () => {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, [open, isMobile, screenWidth, handleResize]);
+    }, [handleResize]);
 
     return (
         <nav id="navBar">
