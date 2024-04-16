@@ -38,30 +38,29 @@ export const Contact: React.FC = () => {
 
     return (
         <section id="contact">
-            <h2>Get in touch:</h2>
-            <form ref={form} onSubmit={sendEmail}>
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" required />
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" name="message" required />
-                <button type="submit">Submit</button> 
+            <h2>Get in touch!</h2>
+            <form className="contact-form" ref={form} onSubmit={sendEmail}>
+                <label className="contact-label" htmlFor="name">Name:</label>
+                <input className="contact-input" type="text" id="name" name="name" required />
+                <label className="contact-label" htmlFor="email">Email:</label>
+                <input className="contact-input" type="email" id="email" name="email" required />
+                <label className="contact-label" htmlFor="message">Message:</label>
+                <textarea className="contact-input" id="message" name="message" required />
+                <button className="contact-button" type="submit">Submit</button> 
             </form>
-            {formStatus && <p>{formStatus}</p>}
-
+            <p className="form-status">{formStatus}</p>
             <footer>
-                <a href="https://github.com/macleann">
-                    <FontAwesomeIcon icon={['fab', 'github']} />
+                <a className="contact-link" href="https://github.com/macleann">
+                    <FontAwesomeIcon icon={['fab', 'github']} className="contact-icon" />
                 </a>
-                <a href="https://www.linkedin.com/in/neil-maclean">
-                    <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                <a className="contact-link" href="https://www.linkedin.com/in/neil-maclean">
+                    <FontAwesomeIcon icon={['fab', 'linkedin']} className="contact-icon" />
                 </a>
-                <a href="https://www.instagram.com/_neilmaclean">
-                    <FontAwesomeIcon icon={['fab', 'instagram']} />   
+                <a className="contact-link" href="https://www.instagram.com/_neilmaclean">
+                    <FontAwesomeIcon icon={['fab', 'instagram']} className="contact-icon" />   
                 </a>
-                <a href="mailto:nbmac13@gmail.com">
-                    <FontAwesomeIcon icon={['far', 'envelope']} />
+                <a className="contact-link" href="mailto:nbmac13@gmail.com">
+                    <FontAwesomeIcon icon={['far', 'envelope']} className="contact-icon" />
                 </a>
             </footer>
         </section>
