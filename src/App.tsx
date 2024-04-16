@@ -10,14 +10,14 @@ import { Contact } from './components/contact/Contact';
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <Hero />
-      <About />
-      <Stack />
-      <Projects />
-      <Contact />
-    </div>
+      <div className="scroll-container">
+        <NavBar />
+        <Hero />
+        <About />
+        <Stack />
+        <Projects />
+        <Contact />
+      </div>
   );
 }
 

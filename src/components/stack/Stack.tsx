@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import './Stack.css';
+import { StackList } from './StackList';
 
 export const Stack: React.FC = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    // This is terrible and needs to be reworked
-    const smallI : number = 35;
-    const mediumI : number = 70;
-    const largeI : number = 180;
-    const hoveredI : number = 360;
+    const icons = StackList;
 
     const handleMouseEnter = (index: number) => {
         setHoveredIndex(index);
@@ -17,48 +14,52 @@ export const Stack: React.FC = () => {
         setHoveredIndex(null);
     };
 
-    const renderIcon = (index: number, size: number) => {
-        return (
-            <div
-                key={index}
-                style={{
-                    height: size,
-                    width: size,
-                    backgroundColor: 'gray',
-                    margin: '0 5px',
-                    transition: 'height 1s',
-                }}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-            />
-        );
-    };
-
     const renderIcons = () => {
-        const icons = [];
-        const iconSizes = [smallI, smallI, smallI, smallI, smallI, smallI, smallI, smallI, smallI, smallI, smallI];
-
-        for (let i = 0; i < iconSizes.length; i++) {
-            let size = hoveredIndex === i ? hoveredI : iconSizes[i];
-            // icon size will be 80px for i-1 and i+1
-            if (hoveredIndex === i - 1 || hoveredIndex === i + 1) {
-                size = largeI;
-            }
-            // icon size will be 40px for i-2 and i+2
-            if (hoveredIndex === i - 2 || hoveredIndex === i + 2) {
-                size = mediumI;
-            }
-            // icon size will otherwise be 20px
-            icons.push(renderIcon(i, size));
-        }
-
-        return icons;
+        return icons.map((icon, index) => {
+            const iconSize = calculateIconSize(index);
+            return (
+                <div 
+                    key={index} 
+                    className="icon-wrapper" 
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <img
+                        src={icon.src}
+                        alt={icon.alt}
+                        style={{
+                            width: iconSize,
+                            height: iconSize,
+                            transition: "width 0.3s, height 0.3s"
+                        }}
+                    />
+                    {hoveredIndex === index && (
+                        <div className="icon-overlay">
+                            <span className="icon-title">{icon.alt}</span>
+                        </div>
+                    )}
+                </div>
+            );
+        });
     };
+
+    const calculateIconSize = (index: number) => {
+        let size = 50; // Minimum size set to 50px
+        const distanceFromHovered = Math.abs(index - (hoveredIndex ?? 0));
+    
+        if (hoveredIndex !== null) {
+            size = icons[index].size * Math.pow(2, 2 - distanceFromHovered);
+        } else {
+            size = icons[index].size; // Default size when not hovered
+        }
+    
+        return Math.max(size, 50); // Ensure size doesn't go below 50px
+    };    
 
     return (
         <section id="stack">
             <h2>My Tech Stack</h2>
-            <div style={{ display: 'flex' }}>{renderIcons()}</div>
+            <div className="icon-container">{renderIcons()}</div>
         </section>
-    )
+    );
 };

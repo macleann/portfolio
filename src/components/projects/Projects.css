@@ -1,0 +1,54 @@
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+#projects > h2 {
+    font-size: 250%;
+    text-align: center;
+}
+
+.carousel-container {
+    width: 100%;
+}
+
+.react-multi-carousel-dot-list {
+    bottom: 3% !important;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 80%;
+}
+
+.project-image {
+    width: 75%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    #projects > h2 {
+        font-size: 200%;
+    }
+
+    .project {
+        flex-direction: column;
+        width: 75%;
+    }
+
+    .project-text {
+        margin-bottom: 1rem;
+    }
+
+    .project-image {
+        width: 100%;
+    }
+    
+}

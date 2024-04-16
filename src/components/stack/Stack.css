@@ -1,0 +1,72 @@
+#stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+#stack > h2 {
+    margin-top: 2rem;
+    font-size: 250%;
+    color: white;
+}
+
+.icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+.icon-wrapper {
+    position: relative;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for icon scaling */
+}
+
+.icon-wrapper:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent gray overlay */
+    padding: 5px; /* Add padding for better readability */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.icon-title {
+    color: white; /* Text color */
+    font-size: 14px; /* Adjust font size */
+}
+
+.icon-wrapper:hover .icon-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+@media screen and (max-width: 768px) {
+    #stack > h2 {
+        font-size: 200%;
+    }
+
+    .icon-container {
+        width: 85%;
+        height: 50%;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .icon-container > * {
+        margin: 0px;
+    }
+}
