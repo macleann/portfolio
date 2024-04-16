@@ -41,12 +41,11 @@ iframe {
 
     .about-text {
         width: 85%;
-        margin: 5px;
+        margin: 25% 5px 0 5px;
     }
 
     iframe {
         width: 85%;
-        height: 500px;
-        margin: 5px;
+        margin: 5px 5px 20px 5px;
     }
 }

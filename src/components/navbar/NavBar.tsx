@@ -50,11 +50,7 @@ export const NavBar: React.FC = () => {
                 <a onClick={() => setOpen(false)} href="#hero"><img src={logo} id="site-logo" alt="logo" /></a>
                 <FontAwesomeIcon id="hamburger" onClick={toggleMenu} icon={faBars} />
             </div>
-            { open && isMobile ?
             <NavList toggleMenu={toggleMenu} />
-            :
-            <NavList toggleMenu={toggleMenu} />
-            }
         </nav>
     );
 };
