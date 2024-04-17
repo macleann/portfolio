@@ -42,6 +42,33 @@
     width: 80%;
 }
 
+.project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.project-link {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.project-link:hover {
+    background-color: #6AA84F;
+    color: black;
+    transition: 250ms;
+}
+
+.project-link:active {
+    transform: translateY(2px);
+}
+
 .project-image {
     width: 75%;
     margin: 0 auto;

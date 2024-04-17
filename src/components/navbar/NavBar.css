@@ -36,6 +36,11 @@ a {
     color: inherit;
 }
 
+a:hover {
+    color: #6AA84F;
+    text-decoration: none !important;
+}
+
 #site-logo {
     width: 100px;
     padding: 10px 10px 10px 0px;

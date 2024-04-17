@@ -75,7 +75,7 @@ export const RenderProject: React.FC<RenderProjectProps> = ({ projects }) => {
                         <div className="project-text">
                             <h3>{project.title}</h3>
                             <p>{project.description}</p>
-                            {linkPresent ? <a href={project.link} target="_blank" rel="noreferrer">View Project</a> : null}
+                            {linkPresent ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer">View Project</a> : null}
                         </div>
                         <img className="project-image" src={project.imagePath} alt={project.title} />
                     </div>
