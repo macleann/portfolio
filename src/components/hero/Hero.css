@@ -1,5 +1,5 @@
 #hero {
-    height: 75vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,6 +100,6 @@
     }
 
     .portfolio-picture {
-        width: 200px;
+        width: 40%;
     }
 }

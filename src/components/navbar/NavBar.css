@@ -1,6 +1,7 @@
 #navBar {
     display: flex;
-    position: sticky;
+    position: absolute;
+    width: 100%;
     top: 0;
     background-color: #ffffff;
     z-index: 100;
@@ -33,6 +34,11 @@
 a {
     text-decoration: none;
     color: inherit;
+}
+
+a:hover {
+    color: #6AA84F;
+    text-decoration: none !important;
 }
 
 #site-logo {

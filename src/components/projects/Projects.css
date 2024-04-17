@@ -15,7 +15,22 @@
 }
 
 .react-multi-carousel-dot-list {
-    bottom: 3% !important;
+    bottom: 7% !important;
+}
+
+.custom-dots {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.active {
+    cursor: pointer;
+    color: #6AA84F;
+}
+
+.inactive {
+    cursor: pointer;
+    color: #9c9c9c;
 }
 
 .project {
@@ -27,10 +42,68 @@
     width: 80%;
 }
 
+.project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.project-link {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.project-link:hover {
+    background-color: #6AA84F;
+    color: black;
+    transition: 250ms;
+}
+
+.project-link:active {
+    transform: translateY(2px);
+}
+
 .project-image {
     width: 75%;
     margin: 0 auto;
     object-fit: cover;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.modal.fade {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-image {
+    padding: 20px;
+    border-radius: 4px;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.modal-image:hover {
+    transform: scale(1.15);
 }
 
 @media screen and (max-width: 768px) {
@@ -48,8 +121,17 @@
         margin-bottom: 1rem;
     }
 
+    .project-text > p {
+        font-size: 85%;
+    }
+
     .project-image {
         width: 100%;
     }
     
+    .modal-image {
+        padding: 10px;
+        border-radius: 4px;
+        max-width: 100%;
+    }
 }

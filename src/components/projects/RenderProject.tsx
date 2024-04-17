@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
+import { DotProps } from 'react-multi-carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWindowMinimize } from '@fortawesome/free-solid-svg-icons';
 
 const isMobile = window.innerWidth <= 768;
 
@@ -22,6 +25,15 @@ const responsive = {
     }
   };
 
+const CustomDot = ({ index, active, onClick, carouselState }: DotProps) => {
+    return (
+        <FontAwesomeIcon
+            className={active ? "custom-dots active" : "custom-dots inactive"}
+            onClick={() => onClick}
+            icon={faWindowMinimize} />
+    )
+}
+
 interface RenderProjectProps {
     projects: Array<{
         imagePath: string;
@@ -32,17 +44,24 @@ interface RenderProjectProps {
 }
 
 export const RenderProject: React.FC<RenderProjectProps> = ({ projects }) => {
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const toggleModal = () => {
+        setModalVisible(!modalVisible);
+    }
+
     return (
         <Carousel
             swipeable={true}
             draggable={true}
             showDots={true}
             renderDotsOutside={true}
+            customDot={<CustomDot />}
             arrows={isMobile ? false : true}
             responsive={responsive}
             infinite={true}
             centerMode={false}
-            autoPlay={true}
+            autoPlay={modalVisible ? false : true}
             autoPlaySpeed={10000}
             pauseOnHover={true}
             keyBoardControl={true}
@@ -62,9 +81,12 @@ export const RenderProject: React.FC<RenderProjectProps> = ({ projects }) => {
                         <div className="project-text">
                             <h3>{project.title}</h3>
                             <p>{project.description}</p>
-                            {linkPresent ? <a href={project.link} target="_blank" rel="noreferrer">View Project</a> : null}
+                            {linkPresent ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer">View Project</a> : null}
                         </div>
-                        <img className="project-image" src={project.imagePath} alt={project.title} />
+                        <img onClick={() => toggleModal()} className="project-image" src={project.imagePath} alt={project.title} />
+                        <div className={`modal ${modalVisible ? 'fade' : ''}`} onClick={() => toggleModal()}>
+                            <img className="modal-image" src={project.imagePath} alt={project.title} />
+                        </div>
                     </div>
                 )
             })}
