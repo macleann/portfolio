@@ -1,6 +1,9 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
+import { DotProps } from 'react-multi-carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWindowMinimize } from '@fortawesome/free-solid-svg-icons';
 
 const isMobile = window.innerWidth <= 768;
 
@@ -22,6 +25,15 @@ const responsive = {
     }
   };
 
+const CustomDot = ({ index, active, onClick, carouselState }: DotProps) => {
+    return (
+        <FontAwesomeIcon
+            className={active ? "custom-dots active" : "custom-dots inactive"}
+            onClick={() => onClick}
+            icon={faWindowMinimize} />
+    )
+}
+
 interface RenderProjectProps {
     projects: Array<{
         imagePath: string;
@@ -38,6 +50,7 @@ export const RenderProject: React.FC<RenderProjectProps> = ({ projects }) => {
             draggable={true}
             showDots={true}
             renderDotsOutside={true}
+            customDot={<CustomDot />}
             arrows={isMobile ? false : true}
             responsive={responsive}
             infinite={true}

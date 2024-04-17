@@ -18,6 +18,21 @@
     bottom: 7% !important;
 }
 
+.custom-dots {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.active {
+    cursor: pointer;
+    color: #6AA84F;
+}
+
+.inactive {
+    cursor: pointer;
+    color: #9c9c9c;
+}
+
 .project {
     display: flex;
     justify-content: center;
@@ -46,6 +61,10 @@
 
     .project-text {
         margin-bottom: 1rem;
+    }
+
+    .project-text > p {
+        font-size: 85%;
     }
 
     .project-image {
