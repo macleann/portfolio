@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import { DotProps } from 'react-multi-carousel';
@@ -44,6 +44,12 @@ interface RenderProjectProps {
 }
 
 export const RenderProject: React.FC<RenderProjectProps> = ({ projects }) => {
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const toggleModal = () => {
+        setModalVisible(!modalVisible);
+    }
+
     return (
         <Carousel
             swipeable={true}
@@ -55,7 +61,7 @@ export const RenderProject: React.FC<RenderProjectProps> = ({ projects }) => {
             responsive={responsive}
             infinite={true}
             centerMode={false}
-            autoPlay={true}
+            autoPlay={modalVisible ? false : true}
             autoPlaySpeed={10000}
             pauseOnHover={true}
             keyBoardControl={true}
@@ -77,7 +83,10 @@ export const RenderProject: React.FC<RenderProjectProps> = ({ projects }) => {
                             <p>{project.description}</p>
                             {linkPresent ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer">View Project</a> : null}
                         </div>
-                        <img className="project-image" src={project.imagePath} alt={project.title} />
+                        <img onClick={() => toggleModal()} className="project-image" src={project.imagePath} alt={project.title} />
+                        <div className={`modal ${modalVisible ? 'fade' : ''}`} onClick={() => toggleModal()}>
+                            <img className="modal-image" src={project.imagePath} alt={project.title} />
+                        </div>
                     </div>
                 )
             })}
