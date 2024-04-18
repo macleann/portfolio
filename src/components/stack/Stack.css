@@ -70,3 +70,38 @@
         margin: 0px;
     }
 }
+
+/* Extra small screens */
+
+@media screen and (max-width: 390px) {
+    #stack > h2 {
+        font-size: 150%;
+        margin-top: 5%;
+    }
+
+    .icon-container {
+        height: 60%;
+    }
+
+    .icon-wrapper:hover {
+        transform: scale(1.1); /* Scale up on hover */
+    }
+}
+
+/* Stubby short screens */
+
+@media screen and (max-height: 650px ) {
+    #stack > h2 {
+        font-size: 130%;
+        margin-top: 5%;
+    }
+
+    .icon-container {
+        height: 65%;
+        margin-top: 0rem;
+    }
+
+    .icon-wrapper:hover {
+        transform: scale(1.05); /* Scale up on hover */
+    }
+}

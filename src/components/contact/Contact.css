@@ -3,6 +3,7 @@
     flex-direction: column;
     position: relative;
     height: 95vh;
+    height: 95dvh;
     text-align: center;
     padding: 20px;
 }
@@ -57,7 +58,7 @@ textarea {
 
 footer {
     position: absolute;
-    bottom: 7%;
+    bottom: 1%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -82,5 +83,18 @@ footer {
 @media screen and (max-width: 768px) {
     .contact-form {
         width: 85%;
+    }
+}
+
+/* Extra small screens */
+
+@media screen and (max-width: 390px) {
+    h2 {
+        font-size: 175%;
+        margin-top: 2rem;
+    }
+
+    textarea {
+        height: 50px;
     }
 }

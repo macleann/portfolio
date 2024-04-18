@@ -76,3 +76,16 @@ a:hover {
         font-size: 1.5em;
     }
 }
+
+/* Extra small screens */
+
+@media screen and (max-width: 390px) {
+
+    #site-logo {
+        width: 75px;
+    }
+
+    #hamburger {
+        font-size: 1.25em;
+    }
+}
