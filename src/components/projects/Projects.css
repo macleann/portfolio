@@ -171,3 +171,33 @@
         width: 85%;
     }
 }
+
+/* Shorter desktop displays */
+
+@media screen and (min-width: 769px) and (max-height: 678px) {
+    
+    #projects > h2 {
+        font-size: 200%;
+    }
+
+    .project {
+        width: 80%;
+    }
+
+    .project-link {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .project-image {
+        width: 50%;
+    }
+
+    .modal-image {
+        height: 100%;
+    }
+
+    .modal-image:hover {
+        transform: scale(1.3);
+    }
+}

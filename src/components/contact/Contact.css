@@ -98,3 +98,50 @@ footer {
         height: 50px;
     }
 }
+
+/* Shorter desktop displays */
+
+@media screen and (min-width: 769px) and (max-height: 678px) {
+    h2 {
+        font-size: 200%;
+        margin-top: 5%;
+    }
+
+    .contact-form {
+        width: 40%;
+    }
+
+    .contact-label {
+        font-size: 14px;
+    }
+
+    .contact-input {
+        padding: 8px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .contact-button {
+        padding: 8px 16px;
+    }
+
+    .form-status {
+        font-size: 14px;
+    }
+
+    footer {
+        bottom: 2%;
+    }
+
+    .contact-link {
+        margin: 0 5px;
+    }
+
+    .contact-icon {
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+    }
+}
