@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 
@@ -15,7 +16,7 @@
 }
 
 .react-multi-carousel-dot-list {
-    bottom: 7% !important;
+    bottom: 1% !important;
 }
 
 .custom-dots {
@@ -72,7 +73,7 @@
 .project-image {
     width: 75%;
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .modal {
@@ -118,7 +119,7 @@
     }
 
     .project-text {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .project-text > p {
@@ -126,12 +127,47 @@
     }
 
     .project-image {
-        width: 100%;
+        width: 85%;
     }
     
     .modal-image {
         padding: 10px;
         border-radius: 4px;
         max-width: 100%;
+    }
+}
+
+/* Extra small screens */
+
+@media screen and (max-width: 390px) {
+
+    #projects > h2 {
+        font-size: 150%;
+    }
+
+    .project-link {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .project-image {
+        width: 50%;
+    }
+}
+
+/* Stubby short screens */
+
+@media screen and (max-height: 650px ) {
+    #projects {
+        height: 115svh;
+        scroll-snap-type: none;
+    }
+
+    #projects > h2 {
+        font-size: 130%;
+    }
+
+    .project {
+        width: 85%;
     }
 }

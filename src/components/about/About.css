@@ -35,7 +35,7 @@ iframe {
 @media screen and (max-width: 768px) {
     #about {
         flex-direction: column;
-        height: 175vh;
+        height: 175svh;
         scroll-snap-type: none;
     }
 
@@ -47,5 +47,34 @@ iframe {
     iframe {
         width: 85%;
         margin: 5px 5px 20px 5px;
+    }
+}
+
+/* Extra small screens */
+
+@media screen and (max-width: 390px) {
+    #about {
+        height: 200svh;
+    }
+}
+
+/* Stubby short screens */
+
+@media screen and (max-height: 650px ) {
+    #about {
+        height: 250svh;
+    }
+
+    .about-text {
+        width: 85%;
+        margin: 15% 5px 0 5px;
+    }
+
+    .about-text > h2 {
+        font-size: 130%;
+    }
+
+    .about-text > h3 {
+        font-size: 110%;
     }
 }
