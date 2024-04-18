@@ -13,11 +13,14 @@
 }
 
 .icon-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 30%;
+    height: 50%;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
     align-items: center;
-    height: 40%;
+    justify-items: center;
 }
 
 .icon-wrapper {
@@ -103,5 +106,22 @@
 
     .icon-wrapper:hover {
         transform: scale(1.05); /* Scale up on hover */
+    }
+}
+
+/* Shorter desktop displays */
+
+@media screen and (min-width: 769px) and (max-height: 678px) {
+
+    #stack > h2 {
+        font-size: 200%;
+    }
+
+    .icon-container {
+        height: 60%;
+    }
+
+    .icon-wrapper:hover {
+        transform: scale(1.1); /* Scale up on hover */
     }
 }
