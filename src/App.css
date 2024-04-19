@@ -3,7 +3,7 @@
     height: 100dvh;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
 }
 
 section {
@@ -19,6 +19,7 @@ section {
 @media screen and (max-width: 768px){
     .scroll-container {
         height: 100svh;
+        scroll-snap-type: y proximity;
     }
 
     .section {
