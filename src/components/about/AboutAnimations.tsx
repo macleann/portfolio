@@ -15,6 +15,7 @@ export const AboutAnimations = () => {
     useGSAP(() => {
         let tl = gsap.timeline();
 
+
         // Animate the green circle to grow on scroll
         tl.to('#green-circle', {
             scale: 1.7,
@@ -46,7 +47,6 @@ export const AboutAnimations = () => {
                 start: 'top center',
                 end: 'center center',
                 scrub: 2,
-                markers: true,
             },
         });
 
