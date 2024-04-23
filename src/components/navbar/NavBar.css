@@ -1,6 +1,6 @@
 #navBar {
     display: flex;
-    position: absolute;
+    position: sticky;
     width: 100%;
     top: 0;
     background-color: #ffffff;
