@@ -66,7 +66,7 @@ export const AboutAnimations = () => {
             scrollTrigger: {
                 trigger: 'iframe',
                 start: isMobile ? 'top bottom' : 'top center',
-                end: isMobile ? 'top center' : 'center center',
+                end: isMobile ? 'top 80%' : 'center center',
                 scrub: 2,
                 id: 'spotify-embed',
             },
