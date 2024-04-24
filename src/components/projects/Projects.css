@@ -142,6 +142,7 @@
 @media screen and (max-width: 390px) {
 
     #projects > h2 {
+        margin-top: 20%;
         font-size: 150%;
     }
 
@@ -153,13 +154,17 @@
     .project-image {
         width: 50%;
     }
+
+    .react-multi-carousel-dot-list {
+        bottom: 7% !important;
+    }
 }
 
 /* Stubby short screens */
 
 @media screen and (max-height: 650px ) {
     #projects {
-        height: 115svh;
+        height: 125svh;
         scroll-snap-type: none;
     }
 
@@ -169,6 +174,10 @@
 
     .project {
         width: 85%;
+    }
+
+    .react-multi-carousel-dot-list {
+        bottom: 5% !important;
     }
 }
 
