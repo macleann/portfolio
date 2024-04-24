@@ -25,6 +25,7 @@ export const Hero: React.FC = () => {
             for (let i = 0; i < totalItems; i++) {
                 const item = document.createElement('div');
                 item.classList.add('grid__item');
+                item.id = `item-${i}`;
                 grid.appendChild(item);
             }
         };
@@ -39,7 +40,7 @@ export const Hero: React.FC = () => {
         return () => {
             window.removeEventListener('resize', calculateGrid);
         };
-    }, []);
+    }, []); 
 
     return (
         <section id="hero">

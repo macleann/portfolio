@@ -1,6 +1,6 @@
 #navBar {
     display: flex;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     background-color: #ffffff;
@@ -28,7 +28,7 @@
 }
 
 .list-item {
-    margin: 5px 10px;
+    margin: 5px 15px;
 }
 
 a {
@@ -92,7 +92,7 @@ a:hover {
 
 /* Shorter desktop displays */
 
-@media screen and (min-width: 769px) and (max-height: 678px) {
+@media screen and (min-width: 769px) and (max-height: 768px) {
 
     #navBar {
         height: 10%;

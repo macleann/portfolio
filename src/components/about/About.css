@@ -1,23 +1,42 @@
 #about {
     display: flex;
     margin: auto;
+    position: relative;
+}
+
+.circles {
+    position: absolute;
+    top: 10%;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    z-index: 0;
+}
+
+#green-circle {
+    top: 2.5%;
+    
 }
 
 .about-text {
     width: 50%;
     margin: 0 50px;
+    z-index: 2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    opacity: 0.9;
 }
 
-.about-text h2 {
+.about-text > h2 {
     align-self: flex-start;
 }
 
-.about-text h3 {
+.about-text > h3 {
     margin: 0 50px;
     text-align: right;
 }
 
-.about-text p {
+.about-text > p {
     align-self: flex-start;
     text-rendering: auto;
 }
@@ -30,6 +49,8 @@ iframe {
     width: 50%;
     height: 75%;
     margin-right: 50px;
+    z-index: 2;
+    opacity: 0.9;
 }
 
 @media screen and (max-width: 768px) {
@@ -48,6 +69,12 @@ iframe {
         width: 85%;
         margin: 5px 5px 20px 5px;
     }
+
+    .green-circle {
+        top: 2.5%;
+        left: 50%;
+        transform: translateX(-50%); /* Center the circle horizontally */
+    }
 }
 
 /* Extra small screens */
@@ -55,6 +82,10 @@ iframe {
 @media screen and (max-width: 390px) {
     #about {
         height: 200svh;
+    }
+
+    .green-circle {
+        top: 3.5%;
     }
 }
 
@@ -77,11 +108,15 @@ iframe {
     .about-text > h3 {
         font-size: 110%;
     }
+
+    .green-circle {
+        top: 4.5%;
+    }
 }
 
 /* Shorter desktop displays */
 
-@media screen and (min-width: 769px) and (max-height: 678px) {
+@media screen and (min-width: 769px) and (max-height: 768px) {
 
     #about {
         height: 150svh;

@@ -101,7 +101,7 @@ footer {
 
 /* Shorter desktop displays */
 
-@media screen and (min-width: 769px) and (max-height: 678px) {
+@media screen and (min-width: 769px) and (max-height: 768px) {
     h2 {
         font-size: 200%;
         margin-top: 5%;

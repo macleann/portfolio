@@ -10,7 +10,7 @@ import { Contact } from './components/contact/Contact';
 
 function App() {
   return (
-      <div className="scroll-container">
+      <div id="scroll-container">
         <NavBar />
         <Hero />
         <About />

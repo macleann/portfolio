@@ -1,11 +1,27 @@
 import React from 'react';
 import './About.css';
+import { AboutAnimations } from './AboutAnimations';
 
 export const About: React.FC = () => {
     const isMobile: boolean = window.innerWidth <= 768 ? true : false;
+    const deviceDimensions = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+    }
+
+    AboutAnimations();
 
     return (
         <section id="about">
+            <svg
+                width={deviceDimensions.width}
+                height={deviceDimensions.height}
+                viewBox="0 0 100 100"
+                className="circles"
+            >
+                <circle id="black-circle" cx="30" cy="30" r="25" fill="#1a1a1a"/>
+                <circle id="green-circle" cx="25" cy="25" r="23" fill="#6AA84F"/>
+            </svg>
             <div className="about-text">
                 <h2>"Anything worth doing is worth doing right."</h2>
                 <h3>-Hunter S. Thompson</h3>

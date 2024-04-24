@@ -1,9 +1,10 @@
-.scroll-container {
+#scroll-container {
     height: 100vh;
-    height: 100dvh;
+    overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
 }
 
 section {
@@ -11,7 +12,6 @@ section {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    height: 100dvh;
     background-color: #f0f0f0;
     scroll-snap-align: start;
 }
@@ -19,6 +19,7 @@ section {
 @media screen and (max-width: 768px){
     .scroll-container {
         height: 100svh;
+        scroll-snap-type: y proximity;
     }
 
     .section {

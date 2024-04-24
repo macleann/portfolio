@@ -6,6 +6,7 @@
     background-color: #111111;
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 .hero-background {
@@ -14,7 +15,7 @@
     height: 100%;
     display: grid;
     gap: 3px; /* Must be changed in conjunction with line 13 of Hero.tsx */
-    z-index: 0;
+    z-index: 1;
 }
 
 .grid__item {
