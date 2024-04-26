@@ -4,7 +4,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     scrollbar-width: none;
 }
 
@@ -18,11 +18,12 @@ section {
 }
 
 @media screen and (max-width: 768px){
-    .scroll-container {
+    #scroll-container {
         height: 100svh;
+        scroll-snap-type: y proximity;
     }
 
-    .section {
+    section {
         height: 100svh;
     }
 }
@@ -31,7 +32,7 @@ section {
 
 @media screen and (min-width: 769px) and (max-height: 768px) {
 
-    .scroll-container {
+    #scroll-container {
         scroll-snap-type: y mandatory;
     }
 }
